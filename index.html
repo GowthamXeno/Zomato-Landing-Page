@@ -20,15 +20,19 @@
     <section class="HeroSection">
         <header>
             <nav class="navbar">
-                <a href="#">Get the App</a>
+                <div class="getapp">
+                    <object type="image/svg+xml" data="images/download.svg" width="20px" height="20px" class="icondownload"></object>
+                    <a href="#">Get the App</a>
+                </div>
+                
 
                 <div class="navbar_menu_container">
                     <a href="#" class="link">Inventor Relations</a>
                     <a href="#" class="link">Add Restaurants</a>
                     <a href="#" class="link">Login</a>
                     <a href="#" class="link">Sign Up</a>
-                    <a href="#" class="user_icon">
-                        <i class="fa-solid fa-user"></i>
+                    <a href="#" class="navbarbutton">
+                        <img class="hamburger" src="images/hamburger-menu.svg"></img>
                     </a>
                 </div>
             </nav>
@@ -37,14 +41,51 @@
         </header>
         <div class="HeroSectionContainer">
             <img class="HeroLogo" src="images/heroSectionLogo.png" />
-            <h1 class="HeroTitle">Find the best restaurants, cafés and bars in India</h1>
-            <div>
-                <input class="InputLocation" type="text" placeholder="Chennai" />
-                <input class="InputSearch" type="text" placeholder="Search for a restaurant, cuisine or a dish" />
+            <h1 class="HeroTitle">Discover the best food & drinks in Chennai</h1>
+            <div class="HeroInputContainer">
+                <div class="InputLocationContainer">
+                    <object type="image/svg+xml" data="images/location.svg" width="20px" height="20px" class="iconlocation"></object>
+                <input class="HeroInputLocation" type="text" placeholder="Chennai" />
+                </div>
+                <div class="InputSearchContainer">
+                    <object type="image/svg+xml" data="images/search.svg" width="20px" height="20px"class="iconsearch"></object>
+                    <input class="HeroInputSearch" type="text" placeholder="Search for a restaurant, cuisine or a dish" />
+                </div>
             </div>
             
 
         </div>
+    </section>
+
+    <section class="container we_offer">
+        <div class="we_offer_card">
+            <img src="images/item1.png" alt="card 1 img">
+            <div class="card_content">
+                <h2>Order Online</h2>
+                <p>Stay home and order to your doorstep</p>
+            </div>
+        </div>
+        <div class="we_offer_card">
+            <img src="images/item2.png" alt="card 2 img">
+            <div class="card_content">
+                <h2>Dining</h2>
+              <p>View the citys favourite dining venue</p>
+            </div>
+        </div>
+        <div class="we_offer_card">
+            <img src="images/item3.png" alt="card 3 img">
+            <div class="card_content">
+                <h2>Nightlife and clubs</h2>
+            <p>Explore the citys top nightlife outlets</p>
+            </div>
+        </div>
+        <!-- <div class="we_offer_card">
+            <img src="images/item4.png" alt="card 4 img">
+            <div class="card_content">
+                <h2>Order Online</h2>
+          <p>Stay home and order to your doorstep</p>
+            </div>
+        </div> -->
     </section>
 </body>
 </html>

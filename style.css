@@ -1,57 +1,183 @@
-*{
-    margin:0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Poppins', sans-serif;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
 }
-.HeroSection{
-    background: url("./images/heroSectionBackground.png");
-    background-size: cover;
-    background-position: center;
-    min-height:60vh;
-    color:white;
+.HeroSection {
+  background: url("./images/heroSectionBackground.png");
+  background-size: cover;
+  background-position: center;
+  min-height: 60vh;
+  color: white;
+}
+.getapp {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.icondownload {
+  margin-bottom: 6px;
+}
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 60px;
+  padding: 15px 30px;
 }
 
-.navbar{
-    display:flex;
-    align-items: center;
-    justify-content: space-between;
-    height: 60px;
-    padding: 15px 30px;
+.navbar a {
+  text-decoration: none;
+  color: white;
 }
 
-.navbar a{
-    text-decoration: none;
-    color:white;
+.navbar_menu_container {
+  display: flex;
+  gap: 30px;
 }
 
-.navbar_menu_container{
+.navbar_menu_container .navbarbutton {
+  height: 28px;
+  width: 28px;
+  border-radius: 50%;
+  display: none;
+}
+.HeroSectionContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: calc(60vh - 60px);
+  gap: 22px;
+}
+.HeroLogo {
+  width: 200px;
+  height: auto;
+}
+.HeroTitle {
+  font-size: 30px;
+  font-weight: 300;
+  text-align: center;
+}
+.HeroInputContainer {
+  background-color: white;
+  border-radius: 10px;
+  border: none;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 60%;
+  gap: 10px;
+}
+.HeroInputLocation,
+.HeroInputSearch {
+  padding: 5px;
+  border: none;
+  outline: none;
+  flex: 1;
+}
+.HeroInputLocation {
+  border-right: 2px solid #e0e0e0;
+  width: calc(35% - 20px);
+}
+.HeroInputSearch {
+  width: calc(75% - 20px);
+}
+.InputLocationContainer {
+  display: flex;
+  align-items: center;
+  width: 35%;
+}
+.InputSearchContainer {
+  display: flex;
+  align-items: center;
+  width: 65%;
+}
+
+@media only screen and (max-width: 600px) {
+  .navbar_menu_container .navbarbutton {
     display: flex;
-    gap:30px;
+  }
+  .navbar_menu_container .link {
+    display: none;
+  }
+  .HeroSection {
+    height: 80vh;
+  }
+  .HeroSectionContainer {
+    width: 100%;
+  }
+  .HeroSectionContainer {
+    height: calc(80vh - 55px);
+  }
+  .HeroTitle {
+    font-size: 25px;
+    width: 90%;
+  }
+  .HeroInputLocation,
+  .HeroInputSearch {
+    padding: 11px;
+    padding-left: 4px;
+    width: 100%;
+  }
+  .HeroInputContainer {
+    flex-direction: column;
+    width: 50%;
+    background-color: transparent;
+    gap: 15px;
+  }
+  .InputLocationContainer,
+  .InputSearchContainer {
+    width: 100%;
+    background-color: white;
+    border-radius: 10px;
+    padding: 2px 5px;
+  }
+  .HeroInputLocation {
+    border:none;
+  }
 }
 
-.navbar_menu_container .user_icon{
-    border:1px solid white;
-    height: 25px;
-    width: 25px;
-    border-radius: 50%;
+.container{
+    margin:3rem 1rem;
+    width: 95%;
+    
+}
+.card_content{
+    padding:10px;
+}
+.card_content h2{
+    font-size: 20px;
+    font-weight: 400;
+}
+.card_content p{
+    font-size: 12.5px;
+}
+
+.we_offer{
     display: flex;
+    flex-wrap: wrap;
+    gap:0.5rem;
     align-items: center;
     justify-content: center;
-    padding: 5px;
-    display: none;
+}
+.we_offer_card{
+    border-radius: 10px;
+    overflow: hidden;
+    border : 1px solid #e0e0e0;
+    transition:  transform 0.35s ease;
+    margin-right: 10px;
 }
 
-@media only screen and (max-width:600px){
-    .navbar_menu_container .user_icon{
-        display: flex;
-    }
-    .navbar_menu_container .link{
-        display: none;
-    }
-    .HeroSection{
-        height: 80vh;
-    }
+.we_offer img{
+    height: 160px;
+    width:300px;
+    object-fit: cover;
+    object-position: center;
 }
 
-
+.we_offer_card:hover {
+    transform: scale(1.05); /* Increase the size on hover */
+}
