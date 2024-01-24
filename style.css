@@ -96,49 +96,7 @@
   width: 65%;
 }
 
-@media only screen and (max-width: 600px) {
-  .navbar_menu_container .navbarbutton {
-    display: flex;
-  }
-  .navbar_menu_container .link {
-    display: none;
-  }
-  .HeroSection {
-    height: 80vh;
-  }
-  .HeroSectionContainer {
-    width: 100%;
-  }
-  .HeroSectionContainer {
-    height: calc(80vh - 55px);
-  }
-  .HeroTitle {
-    font-size: 25px;
-    width: 90%;
-  }
-  .HeroInputLocation,
-  .HeroInputSearch {
-    padding: 11px;
-    padding-left: 4px;
-    width: 100%;
-  }
-  .HeroInputContainer {
-    flex-direction: column;
-    width: 80%;
-    background-color: transparent;
-    gap: 15px;
-  }
-  .InputLocationContainer,
-  .InputSearchContainer {
-    width: 100%;
-    background-color: white;
-    border-radius: 10px;
-    padding: 2px 5px;
-  }
-  .HeroInputLocation {
-    border:none;
-  }
-}
+
 
 .container{
     margin:3rem 1rem;
@@ -211,7 +169,7 @@
 }
 
 .collection_card .card{
-  height: 325px;
+  height: 300px;
   min-width:260px;
   border-radius: 4px;
   position: relative;
@@ -245,9 +203,18 @@
   font-size:16px;
 }
 
-.collection_card .card .overlay{
-      background-color: black;
-      /* z-index: ; */
+
+.collection_card .card .overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  /* background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.5)); */
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0)0%,
+                                          rgba(0, 0, 0, 0.3) 50%,
+                                            rgba(0, 0, 0, 0.7) 85%,
+                                            rgba(0, 0, 0, 0.7));
 }
 .get_the_app{
   display: flex;
@@ -473,7 +440,73 @@ footer .footer_section1>img{
   font-size:13.5px;
   width:100%;
 }
-
+.Place_Card_Container{
+  margin-top: 2.5rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap:0.8rem;
+  flex:1;
+  width:100%;
+}
+.Places_Card{
+  height: 5rem;
+  width:22rem;
+  border:1px solid #e8e8e8;
+  /* border:1px solid black; */
+  border-radius: 7px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px ;
+}
+.Places_Card h3,
+.Nearme_Card h3{
+  font-size:19px;
+  font-weight:350;
+}
+.Places_Card p{
+  font-size:15px;
+  color: #363636;
+  font-weight:350;
+}
+.Places_Card>i{
+  font-size: 11px;
+}
+.Nearme_Card>i{
+  font-size: 13px;
+}
+.Locations h1{
+  font-weight: 400;
+  font-size:35px;
+  color: #363636;
+}
+.Nearme h1{
+  font-weight: 400;
+  font-size:30px;
+  color: #363636;
+}
+.Nearme_Container{
+  margin-top: 1.6rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap:01rem;
+  flex:1;
+  width:100%;
+}
+.Nearme_Card{
+  height: 4.5rem;
+  max-width:100%;
+  border:1px solid #e8e8e8;
+  /* border:1px solid black; */
+  border-radius: 7px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px ;
+}
 @media only screen and (max-width:900px){
   .Navigation_Container{
     grid-template-columns: repeat(3,1fr);
@@ -487,5 +520,84 @@ footer .footer_section1>img{
 @media only screen and (max-width: 320px){
   .Navigation_Container{
           grid-template-columns: repeat(1, 1fr);
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .navbar_menu_container .navbarbutton {
+    display: flex;
+  }
+  .navbar_menu_container .link {
+    display: none;
+  }
+  .HeroSection {
+    height: 80vh;
+  }
+  .collection_card .card{
+    height: 180px;
+    min-width:140px;
+  }
+  .HeroSectionContainer {
+    width: 100%;
+  }
+  .HeroSectionContainer {
+    height: calc(80vh - 55px);
+  }
+  .HeroTitle {
+    font-size: 25px;
+    width: 90%;
+  }
+  .HeroInputLocation,
+  .HeroInputSearch {
+    padding: 11px;
+    padding-left: 8px;
+    width: 100%;
+  }
+  .HeroInputContainer {
+    flex-direction: column;
+    width: 80%;
+    background-color: transparent;
+    gap: 15px;
+  }
+  .InputLocationContainer,
+  .InputSearchContainer {
+    width: 100%;
+    background-color: white;
+    border-radius: 10px;
+    padding: 2px 5px;
+  }
+  .HeroInputLocation {
+    border:none;
+  }
+  .card .content{
+    padding: 8px 8px;
+    font-size: 0.6rem;
+  }
+  
+  .content h4{
+    font-weight: 300;
+    font-size:12px;
+  }
+  .footer_section1{
+    gap:15px;
+  }
+  .get_the_app .semicontainer .right h1{
+    font-weight: 400;
+  font-size:1.7rem;
+  }
+}
+@media only screen and (max-width:400px){
+  .Nearme h1{
+    font-size:25px;
+  }
+  .Locations h1{
+    font-size:30px;
+  }
+  .Nearme_Card h3{
+    font-size:15px;
+    font-weight:350;
+  }
+  .Nearme_Card{
+    padding: 14px;
   }
 }
